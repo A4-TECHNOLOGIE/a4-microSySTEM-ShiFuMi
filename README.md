@@ -36,7 +36,7 @@ The microSySTEM-ShiFuMi model uses:
 - **micro-servomotor** – positions the rock-paper-scissors disc;
 - **Grove ultrasonic sensor** – detects the player's hand;
 - **RGB LED** – provides colored backlighting below the disc;
-- **Grove RGB LCD 16 × 2** – displays the game state and selected symbol.
+- **Grove LCD 16 × 2** – displays the game state and selected symbol.
 
 ### Connections used by the extension
 
@@ -45,7 +45,7 @@ The microSySTEM-ShiFuMi model uses:
 | Disc servomotor | S0 on the DFR1216 board |
 | Ultrasonic sensor | P2 |
 | Disc RGB backlight | P0 |
-| Grove RGB LCD | I2C – addresses `0x3E` and `0x62` |
+| Grove LCD | I2C – address `0x3E` |
 | DFR1216 expansion board | I2C – address `0x33` |
 
 ## Add the extension in MakeCode
@@ -109,16 +109,6 @@ a4MicroSystemShiFuMi.lcdShowNumberLine(0, 2)
 ```
 
 The extension initializes the LCD automatically when a display block is used. Text is limited to 16 characters per line.
-
-### Control the LCD backlight
-
-```typescript
-a4MicroSystemShiFuMi.lcdSetBacklightColor(
-    a4MicroSystemShiFuMi.ShiFuMiColor.Green
-)
-```
-
-The LCD backlight can be set to a predefined color, configured with custom RGB values or turned off.
 
 ## Example: one automated round
 

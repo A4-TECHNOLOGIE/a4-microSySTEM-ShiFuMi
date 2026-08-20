@@ -11,9 +11,6 @@ a4MicroSystemShiFuMi.lcdInit()
 a4MicroSystemShiFuMi.lcdClear()
 a4MicroSystemShiFuMi.lcdShowTextLine("SHIFUMI READY", 1)
 a4MicroSystemShiFuMi.lcdShowNumberLine(0, 2)
-a4MicroSystemShiFuMi.lcdSetBacklightColor(a4MicroSystemShiFuMi.ShiFuMiColor.White)
-a4MicroSystemShiFuMi.lcdSetBacklightRgb(255, 255, 255)
-a4MicroSystemShiFuMi.lcdBacklightOff()
 
 basic.forever(function () {
     testDistance = a4MicroSystemShiFuMi.ultrasonicDistanceCm()

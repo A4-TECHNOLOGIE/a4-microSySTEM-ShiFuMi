@@ -13,19 +13,12 @@
   "a4MicroSystemShiFuMi.setDiscBacklightRgb|param|green": "green channel value from 0 to 255",
   "a4MicroSystemShiFuMi.setDiscBacklightRgb|param|blue": "blue channel value from 0 to 255",
   "a4MicroSystemShiFuMi.discBacklightOff": "Turns off the RGB backlight located below the disc.",
-  "a4MicroSystemShiFuMi.lcdInit": "Initializes the Grove RGB LCD screen.",
+  "a4MicroSystemShiFuMi.lcdInit": "Initializes the Grove LCD screen.",
   "a4MicroSystemShiFuMi.lcdClear": "Clears the LCD screen.",
   "a4MicroSystemShiFuMi.lcdShowTextLine": "Displays text on one line of the LCD screen. Text longer than 16 characters is truncated.",
   "a4MicroSystemShiFuMi.lcdShowTextLine|param|text": "text to display",
   "a4MicroSystemShiFuMi.lcdShowTextLine|param|line": "line number from 1 to 2",
   "a4MicroSystemShiFuMi.lcdShowNumberLine": "Displays a number on one line of the LCD screen.",
   "a4MicroSystemShiFuMi.lcdShowNumberLine|param|value": "number to display",
-  "a4MicroSystemShiFuMi.lcdShowNumberLine|param|line": "line number from 1 to 2",
-  "a4MicroSystemShiFuMi.lcdSetBacklightColor": "Sets the LCD backlight to a predefined color.",
-  "a4MicroSystemShiFuMi.lcdSetBacklightColor|param|color": "color used by the LCD backlight",
-  "a4MicroSystemShiFuMi.lcdSetBacklightRgb": "Sets a custom RGB color for the LCD backlight.",
-  "a4MicroSystemShiFuMi.lcdSetBacklightRgb|param|red": "red channel value from 0 to 255",
-  "a4MicroSystemShiFuMi.lcdSetBacklightRgb|param|green": "green channel value from 0 to 255",
-  "a4MicroSystemShiFuMi.lcdSetBacklightRgb|param|blue": "blue channel value from 0 to 255",
-  "a4MicroSystemShiFuMi.lcdBacklightOff": "Turns off the LCD backlight."
+  "a4MicroSystemShiFuMi.lcdShowNumberLine|param|line": "line number from 1 to 2"
 }

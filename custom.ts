@@ -1,4 +1,4 @@
-//% weight=100 color=#F29C00 icon="\uf2db" block="A4 microSySTEM ShiFuMi"
+//% weight=100 color=#007BFF icon="\uf074" block="A4 microSySTEM ShiFuMi"
 //% groups='["Disc", "Ultrasonic sensor", "Disc backlight", "LCD"]'
 namespace a4MicroSystemShiFuMi {
     const dfrAddress = 0x33
@@ -6,7 +6,6 @@ namespace a4MicroSystemShiFuMi {
     const ultrasonicPin = DigitalPin.P2
     const discBacklightPin = DigitalPin.P0
     const lcdAddress = 0x3E
-    const lcdRgbAddress = 0x62
 
     let dfrInitialized = false
     let lcdInitialized = false
@@ -69,19 +68,6 @@ namespace a4MicroSystemShiFuMi {
         buffer[0] = 0x40
         buffer[1] = data
         pins.i2cWriteBuffer(lcdAddress, buffer)
-    }
-
-    function writeLcdRgbRegister(registerAddress: number, value: number): void {
-        const buffer = pins.createBuffer(2)
-        buffer[0] = registerAddress
-        buffer[1] = value
-        pins.i2cWriteBuffer(lcdRgbAddress, buffer)
-    }
-
-    function setLcdBacklightRgbRaw(red: number, green: number, blue: number): void {
-        writeLcdRgbRegister(0x04, red)
-        writeLcdRgbRegister(0x03, green)
-        writeLcdRgbRegister(0x02, blue)
     }
 
     function ensureLcd(): void {
@@ -237,7 +223,7 @@ namespace a4MicroSystemShiFuMi {
     }
 
     /**
-     * Initializes the Grove RGB LCD screen.
+     * Initializes the Grove LCD screen.
      */
     //% blockId=a4_shifumi_lcd_init
     //% block="initialize LCD"
@@ -259,10 +245,6 @@ namespace a4MicroSystemShiFuMi {
         lcdCommand(0x01)
         basic.pause(10)
 
-        writeLcdRgbRegister(0x00, 0x00)
-        writeLcdRgbRegister(0x01, 0x00)
-        writeLcdRgbRegister(0x08, 0xAA)
-        setLcdBacklightRgbRaw(255, 255, 255)
         lcdInitialized = true
     }
 
@@ -315,49 +297,4 @@ namespace a4MicroSystemShiFuMi {
         lcdShowTextLine("" + value, line)
     }
 
-    /**
-     * Sets the LCD backlight to a predefined color.
-     * @param color color used by the LCD backlight
-     */
-    //% blockId=a4_shifumi_lcd_backlight_color
-    //% block="set LCD backlight to %color"
-    //% weight=60
-    //% group="LCD"
-    export function lcdSetBacklightColor(color: ShiFuMiColor): void {
-        const rgb = colorToRgb(color)
-        lcdSetBacklightRgb(rgb[0], rgb[1], rgb[2])
-    }
-
-    /**
-     * Sets a custom RGB color for the LCD backlight.
-     * @param red red channel value from 0 to 255, eg: 255
-     * @param green green channel value from 0 to 255, eg: 255
-     * @param blue blue channel value from 0 to 255, eg: 255
-     */
-    //% blockId=a4_shifumi_lcd_backlight_rgb
-    //% block="set LCD backlight red %red green %green blue %blue"
-    //% red.min=0 red.max=255 red.defl=255
-    //% green.min=0 green.max=255 green.defl=255
-    //% blue.min=0 blue.max=255 blue.defl=255
-    //% inlineInputMode=inline
-    //% weight=50
-    //% group="LCD"
-    export function lcdSetBacklightRgb(red: number, green: number, blue: number): void {
-        ensureLcd()
-        red = Math.clamp(0, 255, red)
-        green = Math.clamp(0, 255, green)
-        blue = Math.clamp(0, 255, blue)
-        setLcdBacklightRgbRaw(red, green, blue)
-    }
-
-    /**
-     * Turns off the LCD backlight.
-     */
-    //% blockId=a4_shifumi_lcd_backlight_off
-    //% block="turn LCD backlight off"
-    //% weight=40
-    //% group="LCD"
-    export function lcdBacklightOff(): void {
-        lcdSetBacklightRgb(0, 0, 0)
-    }
 }

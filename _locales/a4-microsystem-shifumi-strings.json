@@ -20,9 +20,6 @@
   "a4MicroSystemShiFuMi.lcdClear|block": "clear LCD",
   "a4MicroSystemShiFuMi.lcdShowTextLine|block": "LCD show %text on line %line",
   "a4MicroSystemShiFuMi.lcdShowNumberLine|block": "LCD show number %value on line %line",
-  "a4MicroSystemShiFuMi.lcdSetBacklightColor|block": "set LCD backlight to %color",
-  "a4MicroSystemShiFuMi.lcdSetBacklightRgb|block": "set LCD backlight red %red green %green blue %blue",
-  "a4MicroSystemShiFuMi.lcdBacklightOff|block": "turn LCD backlight off",
   "a4MicroSystemShiFuMi|block": "A4 microSySTEM ShiFuMi",
   "{id:category}a4MicroSystemShiFuMi": "A4 microSySTEM ShiFuMi"
 }

@@ -13,19 +13,12 @@
   "a4MicroSystemShiFuMi.setDiscBacklightRgb|param|green": "valeur du canal vert de 0 à 255",
   "a4MicroSystemShiFuMi.setDiscBacklightRgb|param|blue": "valeur du canal bleu de 0 à 255",
   "a4MicroSystemShiFuMi.discBacklightOff": "Éteint le rétroéclairage RGB placé sous le disque.",
-  "a4MicroSystemShiFuMi.lcdInit": "Initialise l'écran LCD RGB Grove.",
+  "a4MicroSystemShiFuMi.lcdInit": "Initialise l'écran LCD Grove.",
   "a4MicroSystemShiFuMi.lcdClear": "Efface l'écran LCD.",
   "a4MicroSystemShiFuMi.lcdShowTextLine": "Affiche un texte sur une ligne de l'écran LCD. Le texte est limité à 16 caractères.",
   "a4MicroSystemShiFuMi.lcdShowTextLine|param|text": "texte à afficher",
   "a4MicroSystemShiFuMi.lcdShowTextLine|param|line": "numéro de ligne de 1 à 2",
   "a4MicroSystemShiFuMi.lcdShowNumberLine": "Affiche un nombre sur une ligne de l'écran LCD.",
   "a4MicroSystemShiFuMi.lcdShowNumberLine|param|value": "nombre à afficher",
-  "a4MicroSystemShiFuMi.lcdShowNumberLine|param|line": "numéro de ligne de 1 à 2",
-  "a4MicroSystemShiFuMi.lcdSetBacklightColor": "Règle le rétroéclairage de l'écran LCD avec une couleur prédéfinie.",
-  "a4MicroSystemShiFuMi.lcdSetBacklightColor|param|color": "couleur du rétroéclairage de l'écran LCD",
-  "a4MicroSystemShiFuMi.lcdSetBacklightRgb": "Définit une couleur RGB personnalisée pour le rétroéclairage de l'écran LCD.",
-  "a4MicroSystemShiFuMi.lcdSetBacklightRgb|param|red": "valeur du canal rouge de 0 à 255",
-  "a4MicroSystemShiFuMi.lcdSetBacklightRgb|param|green": "valeur du canal vert de 0 à 255",
-  "a4MicroSystemShiFuMi.lcdSetBacklightRgb|param|blue": "valeur du canal bleu de 0 à 255",
-  "a4MicroSystemShiFuMi.lcdBacklightOff": "Éteint le rétroéclairage de l'écran LCD."
+  "a4MicroSystemShiFuMi.lcdShowNumberLine|param|line": "numéro de ligne de 1 à 2"
 }
