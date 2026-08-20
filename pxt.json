@@ -1,18 +1,19 @@
 {
-    "name": "microSYS-Chifoumi",
-    "version": "0.0.1",
-    "description": "MakeCode extension for the microSySTEM-Chifoumi model",
+    "name": "a4-microsystem-shifumi",
+    "version": "1.0.0",
+    "description": "MakeCode extension for the A4 Technologie microSySTEM-ShiFuMi educational rock-paper-scissors model.",
+    "license": "MIT",
+    "public": true,
     "dependencies": {
-        "core": "*",
-        "radio": "*",
-        "microphone": "*",
-        "neopixel": "github:microsoft/pxt-neopixel"
+        "core": "*"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
         "README.md",
-        "chifoumi.ts"
+        "custom.ts",
+        "_locales/a4-microsystem-shifumi-strings.json",
+        "_locales/a4-microsystem-shifumi-jsdoc-strings.json",
+        "_locales/fr/a4-microsystem-shifumi-strings.json",
+        "_locales/fr/a4-microsystem-shifumi-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
