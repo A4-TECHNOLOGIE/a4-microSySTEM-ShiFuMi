@@ -1,4 +1,4 @@
-//% weight=100 color=#007BFF icon="\uf074" block="A4 microSySTEM ShiFuMi"
+//% weight=100 color=#003CFF icon="\uf257" block="A4 microSySTEM ShiFuMi"
 //% groups='["Disc", "Ultrasonic sensor", "Disc backlight", "LCD"]'
 namespace a4MicroSystemShiFuMi {
     const dfrAddress = 0x33
